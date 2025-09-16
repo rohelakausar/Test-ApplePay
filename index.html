@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../assets/static/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/static/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+    <style>
+        #error-paragraph {
+            color: red;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        #success-paragraph {
+            color: green;
+            font-weight: 600;
+            text-align: center;
+        }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,800|Ubuntu:400,500,700"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/images/logo.jpg" />
+
+    <title>PAYS store - Rose Saphire Apple Pay recurring</title>
+    <meta name="format-detection" content="telephone=no">
+</head>
+
+<body>
+    <div id="preloader">
+        <div id="preloader-status">
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+            <div id="preloader-title">Loading</div>
+        </div>
+    </div>
+    <header>
+        <section class="navbar container">
+            <a href="../index.html">
+                <img src="../assets/images/logo.png" />
+            </a>
+            <nav class="cl-effect-15" id="cl-effect-15">
+                <a href="index.html" class="active" data-hover="FRESH IN">FRESH IN</a>
+                <a href="index.html" data-hover="LADIES">LADIES</a>
+                <a href="index.html" data-hover="MEN">MEN</a>
+                <a href="index.html" data-hover="BLOG">BLOG</a>
+                <a href="index.html" data-hover="CONTACT">CONTACT</a>
+            </nav>
+            <div class="basket">
+                <img src="../assets/images/search.png" />
+                <img src="../assets/images/shopping-cart.png" />
+            </div>
+        </section>
+    </header>
+    <div class="container main-container checkout-container">
+        <div>
+            <div class="details-images">
+                <img src="../assets/images/details/rose-saphire/big.png" class="main-image" />
+                <div class="small-images">
+                    <img src="../assets/images/details/rose-saphire/small-1.jpg" />
+                    <img src="../assets/images/details/rose-saphire/small-2.jpg" />
+                    <img src="../assets/images/details/rose-saphire/small-3.jpg" />
+                    <img src="../assets/images/details/rose-saphire/small-4.jpg" />
+                </div>
+            </div>
+
+        </div>
+        <div class="details-description-content">
+            <p class="title">Rose Saphire</p>
+            <p class="overview">Direct Apple Pay Integration - Recurring payment</p>
+            <p class="description">This handsome Rose Saphire multi function watch comes fitted with a rose gold
+                stainless steel case and is fastened with a textured black leather strap and silver dial. The watch has
+                a date function and is waterproof to a depth of 10 meters allowing it to withstand the demands of a
+                modern lifestyle.</p>
+            <p class="price">$20.00</p>
+            <div>
+                <p>Standalone Integration:</p>
+                <div>
+                    <label for="paymentRequestOptions">Apple Pay Payment Request:</label>
+                    <textarea class="form-control" id="paymentRequestOptions" placeholder="" rows="10"></textarea>
+                </div>
+                <style>
+                    apple-pay-button {
+                        --apple-pay-button-height: 30px;
+                        --apple-pay-button-border-radius: 3px;
+                        --apple-pay-button-padding: 0px 0px;
+                        display: block;
+                    }
+                </style>
+                <br>
+                <apple-pay-button id="apple-pay-button" buttonstyle="black" type="plain" locale="en-US" style="visibility: hidden;"
+                    onclick="applePayButtonClicked()"></apple-pay-button><br>
+                <div class="single-line-item" style="visibility: hidden;" id="applePayPayloadBlock">
+                    <p>Apple Pay payload:</p>
+                    <textarea class="form-control" id="applePayPayload" placeholder="" rows="10"></textarea>
+                </div>
+                <div class="single-line-item pay-now-button unselectable" id="copyApplePayPayloadButton"
+                    style="visibility: hidden;" onclick="copyApplePayPayload()">Copy Apple Pay payload to clipboard
+                </div>
+                <br>
+            </div>
+            <br>
+            <p id="error-paragraph"></p>
+            <p id="success-paragraph"></p>
+        </div>
+    </div>
+    <div class="container footer">
+        <div class="row">
+            <div class="col-md-5 col-sm-4">
+                <p class="title">OUR COMPANY</p>
+                <p class="content">Buying online has never been easier or more secure with PAYS Store. Our beautifully
+                    designed checkout enables consumers from around the world to purchase online in their own currency
+                    by using a variety of global payment methods, providing them with a world-class secure online
+                    experience.</p>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <p class="title">CUSTOMER SERVICE</p>
+                <div class="col-md-6 col-sm-6 customer-service">
+                    <p>Help</p>
+                    <p>Warranty</p>
+                    <p>Terms</p>
+                </div>
+                <div class="col-md-6 col-sm-6 customer-service">
+                    <p>My Account</p>
+                    <p>Returns</p>
+                    <p>Gift voucher</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4">
+                <p class="title">CONTACT</p>
+                <p>
+                    <span class="gold contact bold">T:</span>
+                    <a href="tel:1-866-826-8003" class="contact gray">1-866-826-8003</a>
+                </p>
+                <p>
+                    <span class="gold bold contact">E:</span>
+                    <a href="mailto:sales@paysafe.com" class="bold contact gray">sales@paysafe.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="line" style="margin-top: 83px;" />
+        <div class="container" style="padding: 20px 0 20px 0">
+            <div id="copyright" class="pull-left">
+                &copy;PAYS store 2025</div>
+            <div class="pull-right social">
+                <img src="../assets/images/facebook.png" />
+                <a href="https://twitter.com/paysafegroup">
+                    <img src="../assets/images/twitter.png"></img>
+                </a>
+                <img src="../assets/images/instagram.png" />
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="index.js"> </script>
+    <script crossorigin src="https://applepay.cdn-apple.com/jsapi/1.latest/apple-pay-sdk.js"></script>
+    <script src="applepay.js"></script>
+</body>
+
+</html>
